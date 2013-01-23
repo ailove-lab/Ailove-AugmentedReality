@@ -1,0 +1,158 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{98C56530-847D-40CB-B84A-25D8F7241D02}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>ARBaseProject</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>NotSet</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>NotSet</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="GlobalConfig.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="GlobalConfigRelease.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <OutDir>..\..\bin\$(Configuration)\</OutDir>
+    <IntDir>..\..\obj\$(Configuration)\</IntDir>
+    <PostBuildEventUseInBuild>true</PostBuildEventUseInBuild>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>..\..\bin\$(Configuration)\</OutDir>
+    <IntDir>..\..\obj\$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_CRT_SECURE_NO_DEPRECATE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\..\inc;..\..\res;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <ExceptionHandling>Async</ExceptionHandling>
+      <StructMemberAlignment>Default</StructMemberAlignment>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <DelayLoadDLLs>
+      </DelayLoadDLLs>
+    </Link>
+    <PostBuildEvent>
+      <Command>copy $(TargetPath) $(SolutionDir)\..\..\bin\$(Configuration)</Command>
+    </PostBuildEvent>
+    <ProjectReference>
+      <LinkLibraryDependencies>true</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;_CONSOLE;_CRT_SECURE_NO_DEPRECATE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\..\inc;..\..\res;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <ExceptionHandling>Async</ExceptionHandling>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+    <PostBuildEvent>
+      <Command>copy $(TargetPath) $(SolutionDir)\..\..\bin\$(Configuration)</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <None Include="..\..\Readme.md" />
+    <None Include="..\..\res\GraphicsEngine.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\inc\XmlSerializer.cxx" />
+    <ClCompile Include="..\..\inc\XmlSerializerImpl.cxx" />
+    <ClCompile Include="..\..\lib\OgreMaxViewers\Common\Code\OgreMaxModel.cpp" />
+    <ClCompile Include="..\..\lib\OgreMaxViewers\Common\Code\OgreMaxScene.cpp" />
+    <ClCompile Include="..\..\lib\OgreMaxViewers\Common\Code\OgreMaxUtilities.cpp" />
+    <ClCompile Include="..\..\lib\OgreMaxViewers\Common\Code\ProgressCalculator.cpp" />
+    <ClCompile Include="..\..\lib\OgreMaxViewers\Common\Code\Version.cpp" />
+    <ClCompile Include="..\..\src\ARBaseProject.cpp" />
+    <ClCompile Include="..\..\src\AREngine.cpp" />
+    <ClCompile Include="..\..\src\ARException.cpp" />
+    <ClCompile Include="..\..\src\ARManager.cpp" />
+    <ClCompile Include="..\..\src\BaseApplication.cpp" />
+    <ClCompile Include="..\..\src\CarController.cpp" />
+    <ClCompile Include="..\..\src\GraphicsEngine.cpp" />
+    <ClCompile Include="..\..\src\HelicopterController.cpp" />
+    <ClCompile Include="..\..\src\Model.cpp" />
+    <ClCompile Include="..\..\src\PatternManager.cpp" />
+    <ClCompile Include="..\..\src\XmlSerializer.cpp" />
+    <ClCompile Include="..\..\src\VideoFrame.cpp" />
+    <ClCompile Include="..\..\src\VideoInput.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\lib\OgreMaxViewers\Common\Code\OgreMaxModel.hpp" />
+    <ClInclude Include="..\..\lib\OgreMaxViewers\Common\Code\OgreMaxPlatform.hpp" />
+    <ClInclude Include="..\..\lib\OgreMaxViewers\Common\Code\OgreMaxRenderWindowIterator.hpp" />
+    <ClInclude Include="..\..\lib\OgreMaxViewers\Common\Code\OgreMaxScene.hpp" />
+    <ClInclude Include="..\..\lib\OgreMaxViewers\Common\Code\OgreMaxTypes.hpp" />
+    <ClInclude Include="..\..\lib\OgreMaxViewers\Common\Code\OgreMaxUtilities.hpp" />
+    <ClInclude Include="..\..\lib\OgreMaxViewers\Common\Code\ProgressCalculator.hpp" />
+    <ClInclude Include="..\..\lib\OgreMaxViewers\Common\Code\Version.hpp" />
+    <ClInclude Include="..\..\inc\AREngine.h" />
+    <ClInclude Include="..\..\inc\ARException.h" />
+    <ClInclude Include="..\..\inc\ARManager.h" />
+    <ClInclude Include="..\..\inc\BaseApplication.h" />
+    <ClInclude Include="..\..\inc\CarController.h" />
+    <ClInclude Include="..\..\inc\GraphicsEngine.h" />
+    <ClInclude Include="..\..\inc\HelicopterController.h" />
+    <ClInclude Include="..\..\inc\ModelController.h" />
+    <ClInclude Include="..\..\inc\Model.h" />
+    <ClInclude Include="..\..\inc\PatternManager.h" />
+    <ClInclude Include="..\..\inc\Utils.h" />
+    <ClInclude Include="..\..\inc\XmlSerializer.h" />
+    <ClInclude Include="..\..\inc\VideoFrame.h" />
+    <ClInclude Include="..\..\inc\VideoInput.h" />
+    <!-- ClInclude Include="..\..\resource.h" / -->
+    <ClInclude Include="..\..\res\Resource.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="ARBaseProject.rc" />
+    <ResourceCompile Include="..\..\res\GraphicsEngine.res" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
