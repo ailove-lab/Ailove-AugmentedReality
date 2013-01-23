@@ -44,7 +44,7 @@ void logError(std::string s)
          } catch(ARException& e) {
              logError(e.getMessage());
          } catch(...) {
-             logError("Непредвиденная ошибка");
+             logError("Unexpected Error");
          }
     } catch(...) {
     }

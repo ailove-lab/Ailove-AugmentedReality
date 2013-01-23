@@ -1,9 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Filter Include="OgreMaxFiles">
-      <UniqueIdentifier>{fd7bd16a-7d86-4044-9e0f-8143752b4a72}</UniqueIdentifier>
-    </Filter>
     <Filter Include="inc">
       <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
       <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
@@ -16,11 +13,20 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="src\xml">
+      <UniqueIdentifier>{62a579e0-d082-40da-8fb8-fdae660b7dfd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\OgreMax">
+      <UniqueIdentifier>{948c872d-aa47-4e88-8864-a628b7450367}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="inc\xml">
+      <UniqueIdentifier>{bc9e336e-73a9-4ade-a1af-3a231322db73}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="inc\OgreMax">
+      <UniqueIdentifier>{a32b1abf-cb9a-46c4-af03-28d110395581}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <None Include="..\..\res\GraphicsEngine.ico">
-      <Filter>res</Filter>
-    </None>
     <None Include="..\..\Readme.md" />
   </ItemGroup>
   <ItemGroup>
@@ -48,28 +54,10 @@
     <ClCompile Include="..\..\src\PatternManager.cpp">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\src\XmlSerializer.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\src\Model.cpp">
       <Filter>src</Filter>
     </ClCompile>
     <ClCompile Include="..\..\src\ARException.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\CarController.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\HelicopterController.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\lib\OgreMaxViewers\Common\Code\OgreMaxModel.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\lib\OgreMaxViewers\Common\Code\OgreMaxScene.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\lib\OgreMaxViewers\Common\Code\OgreMaxUtilities.cpp">
       <Filter>src</Filter>
     </ClCompile>
     <ClCompile Include="..\..\lib\OgreMaxViewers\Common\Code\ProgressCalculator.cpp">
@@ -78,11 +66,17 @@
     <ClCompile Include="..\..\lib\OgreMaxViewers\Common\Code\Version.cpp">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\inc\XmlSerializer.cxx">
-      <Filter>inc</Filter>
+    <ClCompile Include="..\..\src\XmlSerializer.cpp">
+      <Filter>src\xml</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\inc\XmlSerializerImpl.cxx">
-      <Filter>inc</Filter>
+    <ClCompile Include="..\..\lib\OgreMaxViewers\Common\Code\OgreMaxModel.cpp">
+      <Filter>src\OgreMax</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\lib\OgreMaxViewers\Common\Code\OgreMaxUtilities.cpp">
+      <Filter>src\OgreMax</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\lib\OgreMaxViewers\Common\Code\OgreMaxScene.cpp">
+      <Filter>src\OgreMax</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -91,9 +85,6 @@
     </ClInclude>
     <ClInclude Include="..\..\inc\GraphicsEngine.h">
       <Filter>inc</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\res\Resource.h">
-      <Filter>res</Filter>
     </ClInclude>
     <ClInclude Include="..\..\inc\ARManager.h">
       <Filter>inc</Filter>
@@ -110,9 +101,6 @@
     <ClInclude Include="..\..\inc\PatternManager.h">
       <Filter>inc</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\inc\XmlSerializer.h">
-      <Filter>inc</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\inc\Model.h">
       <Filter>inc</Filter>
     </ClInclude>
@@ -122,34 +110,10 @@
     <ClInclude Include="..\..\res\resource.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\inc\CarController.h">
-      <Filter>inc</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\inc\ModelController.h">
       <Filter>inc</Filter>
     </ClInclude>
     <ClInclude Include="..\..\inc\Utils.h">
-      <Filter>inc</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\inc\HelicopterController.h">
-      <Filter>inc</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\lib\OgreMaxViewers\Common\Code\OgreMaxModel.hpp">
-      <Filter>inc</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\lib\OgreMaxViewers\Common\Code\OgreMaxPlatform.hpp">
-      <Filter>inc</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\lib\OgreMaxViewers\Common\Code\OgreMaxRenderWindowIterator.hpp">
-      <Filter>inc</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\lib\OgreMaxViewers\Common\Code\OgreMaxScene.hpp">
-      <Filter>inc</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\lib\OgreMaxViewers\Common\Code\OgreMaxTypes.hpp">
-      <Filter>inc</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\lib\OgreMaxViewers\Common\Code\OgreMaxUtilities.hpp">
       <Filter>inc</Filter>
     </ClInclude>
     <ClInclude Include="..\..\lib\OgreMaxViewers\Common\Code\ProgressCalculator.hpp">
@@ -158,13 +122,35 @@
     <ClInclude Include="..\..\lib\OgreMaxViewers\Common\Code\Version.hpp">
       <Filter>inc</Filter>
     </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
-    <ResourceCompile Include="..\..\res\GraphicsEngine.res">
-      <Filter>res</Filter>
-    </ResourceCompile>
-    <ResourceCompile Include="ARBaseProject.rc">
-      <Filter>res</Filter>
-    </ResourceCompile>
+    <ClInclude Include="resource1.h">
+      <Filter>inc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\inc\XmlSerializerImpl.cxx">
+      <Filter>src\xml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\inc\XmlSerializer.cxx">
+      <Filter>src\xml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\inc\XmlSerializer.h">
+      <Filter>inc\xml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\lib\OgreMaxViewers\Common\Code\OgreMaxUtilities.hpp">
+      <Filter>inc\OgreMax</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\lib\OgreMaxViewers\Common\Code\OgreMaxModel.hpp">
+      <Filter>inc\OgreMax</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\lib\OgreMaxViewers\Common\Code\OgreMaxPlatform.hpp">
+      <Filter>inc\OgreMax</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\lib\OgreMaxViewers\Common\Code\OgreMaxRenderWindowIterator.hpp">
+      <Filter>inc\OgreMax</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\lib\OgreMaxViewers\Common\Code\OgreMaxScene.hpp">
+      <Filter>inc\OgreMax</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\lib\OgreMaxViewers\Common\Code\OgreMaxTypes.hpp">
+      <Filter>inc\OgreMax</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

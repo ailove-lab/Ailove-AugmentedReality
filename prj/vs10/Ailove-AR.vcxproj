@@ -40,7 +40,7 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <LinkIncremental>true</LinkIncremental>
+    <LinkIncremental>false</LinkIncremental>
     <OutDir>..\..\bin\$(Configuration)\</OutDir>
     <IntDir>..\..\obj\$(Configuration)\</IntDir>
     <PostBuildEventUseInBuild>true</PostBuildEventUseInBuild>
@@ -68,7 +68,7 @@
       </DelayLoadDLLs>
     </Link>
     <PostBuildEvent>
-      <Command>copy $(TargetPath) $(SolutionDir)\..\..\bin\$(Configuration)</Command>
+      <Command>copy $(TargetPath) $(SolutionDir)\..\..\bin\</Command>
     </PostBuildEvent>
     <ProjectReference>
       <LinkLibraryDependencies>true</LinkLibraryDependencies>
@@ -93,16 +93,13 @@
       <OptimizeReferences>true</OptimizeReferences>
     </Link>
     <PostBuildEvent>
-      <Command>copy $(TargetPath) $(SolutionDir)\..\..\bin\$(Configuration)</Command>
+      <Command>copy $(TargetPath) $(SolutionDir)\..\..\bin\</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
     <None Include="..\..\Readme.md" />
-    <None Include="..\..\res\GraphicsEngine.ico" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\inc\XmlSerializer.cxx" />
-    <ClCompile Include="..\..\inc\XmlSerializerImpl.cxx" />
     <ClCompile Include="..\..\lib\OgreMaxViewers\Common\Code\OgreMaxModel.cpp" />
     <ClCompile Include="..\..\lib\OgreMaxViewers\Common\Code\OgreMaxScene.cpp" />
     <ClCompile Include="..\..\lib\OgreMaxViewers\Common\Code\OgreMaxUtilities.cpp" />
@@ -113,9 +110,7 @@
     <ClCompile Include="..\..\src\ARException.cpp" />
     <ClCompile Include="..\..\src\ARManager.cpp" />
     <ClCompile Include="..\..\src\BaseApplication.cpp" />
-    <ClCompile Include="..\..\src\CarController.cpp" />
     <ClCompile Include="..\..\src\GraphicsEngine.cpp" />
-    <ClCompile Include="..\..\src\HelicopterController.cpp" />
     <ClCompile Include="..\..\src\Model.cpp" />
     <ClCompile Include="..\..\src\PatternManager.cpp" />
     <ClCompile Include="..\..\src\XmlSerializer.cpp" />
@@ -135,9 +130,7 @@
     <ClInclude Include="..\..\inc\ARException.h" />
     <ClInclude Include="..\..\inc\ARManager.h" />
     <ClInclude Include="..\..\inc\BaseApplication.h" />
-    <ClInclude Include="..\..\inc\CarController.h" />
     <ClInclude Include="..\..\inc\GraphicsEngine.h" />
-    <ClInclude Include="..\..\inc\HelicopterController.h" />
     <ClInclude Include="..\..\inc\ModelController.h" />
     <ClInclude Include="..\..\inc\Model.h" />
     <ClInclude Include="..\..\inc\PatternManager.h" />
@@ -145,12 +138,10 @@
     <ClInclude Include="..\..\inc\XmlSerializer.h" />
     <ClInclude Include="..\..\inc\VideoFrame.h" />
     <ClInclude Include="..\..\inc\VideoInput.h" />
+    <ClInclude Include="..\..\inc\XmlSerializer.cxx" />
+    <ClInclude Include="..\..\inc\XmlSerializerImpl.cxx" />
     <!-- ClInclude Include="..\..\resource.h" / -->
-    <ClInclude Include="..\..\res\Resource.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <ResourceCompile Include="ARBaseProject.rc" />
-    <ResourceCompile Include="..\..\res\GraphicsEngine.res" />
+    <ClInclude Include="resource1.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
