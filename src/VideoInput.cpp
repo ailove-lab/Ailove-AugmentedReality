@@ -25,7 +25,6 @@ void VideoInput::init()
 {
     try {
         capturer.reset(new cv::VideoCapture(0));
-
         int type = CV_8UC3;
 	    capturer->set(CV_CAP_PROP_FORMAT, type);
     } catch (...) {
@@ -39,10 +38,7 @@ void VideoInput::init()
 
 //-----------------------------------------------------------------------------
 
-void VideoInput::update() 
-
-{
-
+void VideoInput::update()  {
 	boost::shared_ptr<cv::Mat> mat(new cv::Mat());
 	*capturer >> *mat;
     //boost::shared_ptr<cv::Mat> flipped(new cv::Mat());
@@ -52,9 +48,7 @@ void VideoInput::update()
 
 //-----------------------------------------------------------------------------
 
-boost::shared_ptr<VideoFrame> VideoInput::getFrame()
-
-{
+boost::shared_ptr<VideoFrame> VideoInput::getFrame() {
 	return frame;
 }
 

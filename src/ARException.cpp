@@ -1,7 +1,7 @@
 #include "ARException.h"
 
-ARException ARException::CAN_NOT_INIT_CAMERA("Не получается активировать камеру");
-ARException ARException::CAN_NOT_INIT_TEXTURE("Ваша видеокарта не поддерживает необходимую функциональность");
+ARException ARException::CAN_NOT_INIT_CAMERA("Can not init camera!");
+ARException ARException::CAN_NOT_INIT_TEXTURE("Can not init texture!");
 
 //-------------------------------------------------------------------------------------
 

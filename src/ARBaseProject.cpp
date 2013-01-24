@@ -8,14 +8,11 @@
 #include "ARManager.h"
 #include "ARException.h"
 
-
 #ifdef WIN32
     #include <Windows.h>
 #endif
 
-void logError(std::string s) 
-{
-
+void logError(std::string s) {
     if (!Ogre::LogManager::getSingletonPtr()) {
         Ogre::LogManager *log = new Ogre::LogManager();
         Ogre::LogManager::getSingleton().createLog("Ogre.log");
@@ -46,7 +43,7 @@ void logError(std::string s)
          } catch(...) {
              logError("Unexpected Error");
          }
-    } catch(...) {
+		} catch(...) {
     }
      return 0;
 }

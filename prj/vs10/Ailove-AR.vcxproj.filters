@@ -107,9 +107,6 @@
     <ClInclude Include="..\..\inc\ARException.h">
       <Filter>inc</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\res\resource.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\inc\ModelController.h">
       <Filter>inc</Filter>
     </ClInclude>
